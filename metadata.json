@@ -1,0 +1,6 @@
+{
+  "name": "Sistem BSTB Multi Departemen (Teknik & Produksi)",
+  "description": "Aplikasi pembuatan Bukti Serah Terima Barang (BSTB) dinamis departemen Teknik dan Produksi dengan cetak standar ISO dan ekspor XLSX.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* ======================================================== */
+/* ATURAN CETAK (PRINT) - PAS A4 PORTRAIT                   */
+/* ======================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 6mm 8mm;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Sembunyikan semua elemen navigasi, form input, dan tombol */
+  .no-print,
+  nav,
+  header,
+  footer,
+  aside,
+  button,
+  input,
+  select,
+  textarea {
+    display: none !important;
+  }
+
+  /* Pastikan dokumen BSTB tampil penuh dan rapi */
+  #printable-bstb-document {
+    display: block !important;
+    position: relative !important;
+    width: 190mm !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+
+  table {
+    page-break-inside: avoid !important;
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  tr {
+    page-break-inside: avoid !important;
+  }
+
+  td, th {
+    border-color: #000000 !important;
+  }
+}
